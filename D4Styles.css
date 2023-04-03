@@ -1,0 +1,76 @@
+.h1-white{
+    color: white;
+}
+h1{
+    text-align: center;
+}
+
+
+
+body{
+    background-color: #1f344c;
+}
+h2{
+    text-align: center;
+}
+
+.TeamMember{
+    text-align: center;
+}
+
+hr{
+    border-top: 10px solid black;
+}
+
+.centeredInfo-white{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-style: solid;
+    border-radius: 0.5em;
+    border-color: white;
+    border-width: 1px;
+    padding: 0.5em;
+}
+
+.btn-blue{
+    border-style: hidden;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: #0269e7;
+    color: white;
+    transition: all .15s ease-in-out;
+
+}
+
+.btn-blue:hover{
+    background-color: #0d79fd;
+    transform: scale(1.05);
+}
+
+.btn-green{
+    border-style: hidden;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: #30b089;
+    color: white;
+    transition: all .15s ease-in-out;
+}
+
+.btn-green:hover{
+    background-color: #41c49d;
+    transform: scale(1.05);
+}
+
+.textInput{
+
+}
+
+.selectInput{
+
+}
+
+.submitInput{
+
+}
+
