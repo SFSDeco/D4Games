@@ -8,6 +8,9 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!--TODO: PHP Implementation! -->
+    <?php include "php/header.php"; ?>
 </head>
 <body>
     <?php
@@ -97,6 +100,9 @@ session_start();
     <?php 
     if(isset($_SESSION['username']))
         echo $_SESSION['username'];
+
+
+    include "php/footer.php";
     ?>  
     
 </body>
