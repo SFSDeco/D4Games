@@ -9,7 +9,7 @@
 <br><br>
 
     <body>
-        
+        <?php include "Navbar.php";?>
         <!-- div for bootstrap container-->
         <div>
             <h1>Profil:</h1>
