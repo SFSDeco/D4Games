@@ -10,6 +10,7 @@
     </head>
 
     <body>
+        <?php include "Navbar.php";?>
         <h1>Wilkommen auf D4Games</h1>
 
         <div>
