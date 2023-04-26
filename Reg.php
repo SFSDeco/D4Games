@@ -14,6 +14,8 @@ session_start();
 </head>
 <body>
     <?php
+    include "Navbar.php";
+    
     $passwordIdentity = "";
     $fname = $email = $gender = $lname = $username = $password = $password1 = $ok= "";
 
