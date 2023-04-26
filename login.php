@@ -13,7 +13,8 @@ session_start();
     <?php include "php/header.php"; ?>
 </head>
 <body>
-    <?php 
+    <?php include "Navbar.php";
+ 
     $userErr="";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
