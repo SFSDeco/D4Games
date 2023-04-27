@@ -1,0 +1,17 @@
+Pong (KI?)
+Minesweeper
+Memory
+Tetris
+Schach (KI?)
+Jump and Run (wie Mario?)
+Dame (KI?)
+Reaktionsklicker
+Hangman
+Doodlejump (Platformer)
+Flappy Bird
+Space Invader
+Peggle?
+Schiffe versenken (KI?)
+Breakout
+Frogger
+4 Gewinnt
