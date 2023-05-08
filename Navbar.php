@@ -1,16 +1,110 @@
-<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="login.php">Login</a>
-        <a class="nav-link active" aria-current="page" href="Reg.php">Register</a>
-        <a class="nav-link active" aria-current="page" href="profil.php">Profile</a>
-        <a class="nav-link active" aria-current="page" href="impressum.php">Impressum</a>
-      </div>
-    </div>
-  </div>
-</nav>
+<nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
+        <a class="navbar-brand navbar-logo" href="#">D4GAMES</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i>Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fas fa-tachometer-alt"></i>Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Scores.php"><i class="fas fa-tachometer-alt"></i>Scores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="impressum.php"><i class="fas fa-tachometer-alt"></i>Imprint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Hilfe.php"><i class="fas fa-tachometer-alt"></i>Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script>// ---------Responsive-navbar-active-animation-----------
+// ---------Responsive-navbar-active-animation-----------
+function test(){
+	var tabsNewAnim = $('#navbarSupportedContent');
+	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+	var activeItemNewAnim = tabsNewAnim.find('.active');
+	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+	var itemPosNewAnimTop = activeItemNewAnim.position();
+	var itemPosNewAnimLeft = activeItemNewAnim.position();
+	$(".hori-selector").css({
+		"top":itemPosNewAnimTop.top + "px", 
+		"left":itemPosNewAnimLeft.left + "px",
+		"height": activeWidthNewAnimHeight + "px",
+		"width": activeWidthNewAnimWidth + "px"
+	});
+	$("#navbarSupportedContent").on("click","li",function(e){
+		$('#navbarSupportedContent ul li').removeClass("active");
+		$(this).addClass('active');
+		var activeWidthNewAnimHeight = $(this).innerHeight();
+		var activeWidthNewAnimWidth = $(this).innerWidth();
+		var itemPosNewAnimTop = $(this).position();
+		var itemPosNewAnimLeft = $(this).position();
+		$(".hori-selector").css({
+			"top":itemPosNewAnimTop.top + "px", 
+			"left":itemPosNewAnimLeft.left + "px",
+			"height": activeWidthNewAnimHeight + "px",
+			"width": activeWidthNewAnimWidth + "px"
+		});
+	});
+}
+$(document).ready(function(){
+	setTimeout(function(){ test(); });
+});
+$(window).on('resize', function(){
+	setTimeout(function(){ test(); }, 500);
+});
+$(".navbar-toggler").click(function(){
+	$(".navbar-collapse").slideToggle(300);
+	setTimeout(function(){ test(); });
+});
+
+
+
+// --------------add active class-on another-page move----------
+jQuery(document).ready(function($){
+	// Get current path and find target link
+	var path = window.location.pathname.split("/").pop();
+
+	// Account for home page with empty path
+	if ( path == '' ) {
+		path = 'index.html';
+	}
+
+	var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
+	// Add active class to target link
+	target.parent().addClass('active');
+});
+
+
+
+
+// Add active class on another page linked
+// ==========================================
+ $(window).on('load',function () {
+     var current = location.pathname;
+     console.log(current);
+     $('#navbarSupportedContent ul li a').each(function(){
+         var $this = $(this);
+         // if the current path is like this link, make it active
+         if($this.attr('href').indexOf(current) !== -1){
+             $this.parent().addClass('active');
+             $this.parents('.menu-submenu').addClass('show-dropdown');
+             $this.parents('.menu-submenu').parent().addClass('active');
+         }else{
+             $this.parent().removeClass('active');
+         }
+     })
+ });
+
+</script>
+    
