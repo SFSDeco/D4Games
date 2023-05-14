@@ -48,12 +48,12 @@
             <div class = "row">
                 <div class = "col-sm-4"></div>
                 <div class = "col-sm-4">
-                    <p align="center">
+                    <p align="center" class="centeredInfo-white">
                         Projekt nach Auftrag des FH-Technikums Wien <br>
                         Adresse: Höchstädtplatz 6 1200 Wien
                     </p>
                     <br><br>
-                        <p align="center">
+                        <p align="center" class="centeredInfo-white">
                             Verbraucher haben die Möglichkeit, beschwerden an die Online-Streibeilegungsplattform der EU zu richten: <a href="http://ec.europa.eu/odr%22%3Ehttp://ec.europa.eu/odr">http://ec.europa.eu/odr%22%3Ehttp://ec.europa.eu/odr</a><br>
                             Sie können allfällige Beschwerden auch an die oben angegebene E-Mail-Adressen richten.<br><br>
                         </p>
@@ -63,17 +63,13 @@
             <div class = "row">
                 <div class = "col-sm-4"></div>
                 <div class = "col-sm-4">
-                    <p align="center">
-                        Projekt nach Auftrag des FH-Technikums Wien <br>
-                        Adresse: Höchstädtplatz 6 1200 Wien
-                    </p>
-                    <br><br>
-                    <p align="center">
+                    <p align="center" class="centeredInfo-white">
                         Verbraucher haben die Möglichkeit, beschwerden an die Online-Streibeilegungsplattform der EU zu richten: <a href="http://ec.europa.eu/odr%22%3Ehttp://ec.europa.eu/odr">http://ec.europa.eu/odr%22%3Ehttp://ec.europa.eu/odr</a><br>
                         Sie können allfällige Beschwerden auch an die oben angegebene E-Mail-Adressen richten.<br><br>
                     </p>
                 </div>
                 <div class = "col-sm-4"></div>
             </div>
+            <?php include("footer.php");?>
     </body>
 </html>

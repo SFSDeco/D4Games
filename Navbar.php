@@ -10,8 +10,17 @@
                     <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i>Homepage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php"><i class="fas fa-tachometer-alt"></i>Sign Up</a>
+                    <a class="nav-link" href="SignUp.php"><i class="fas fa-tachometer-alt"></i>Sign Up</a>
                 </li>
+				<?php 
+				if(isset($_SESSION["Loggedin"])){
+					if($_SESSION["Loggedin"]==true){
+						echo'<li class="nav-item">
+						<a class="nav-link" href="Profile.php"><i class="fas fa-tachometer-alt"></i>Profile</a>
+					</li>';
+					}
+				}
+				?>
                 <li class="nav-item">
                     <a class="nav-link" href="Scores.php"><i class="fas fa-tachometer-alt"></i>Scores</a>
                 </li>

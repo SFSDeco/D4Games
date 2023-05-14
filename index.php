@@ -1,3 +1,4 @@
+<?php  include("login.php");?>
 <!DOCTYPE html>
 <html>
 
@@ -8,6 +9,7 @@
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="IndexScript.js"></script>
     <link rel="stylesheet" href="D4Styles.css">
     <title>D4GAMES</title>
 </head>
@@ -23,77 +25,23 @@
     <div class="container-fluid">
 
         <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
+            <form action="index.php" class="form-container" method="POST">
                 <h1 class="h1-white">Login</h1>
 
-                <label for="usernames" class="inputLabel"><b>Username</b></label><br>
-                <input type="text" class="textInput" placeholder="Enter Username" name="username" required><br>
+                <label for="username" class="inputLabel"><b>Username</b></label><br>
+                <input type="text" class="textInput" placeholder="Enter Username" name="username" id="username" required><br>
 
                 <label for="psw" class="inputLabel"><b>Password</b></label><br>
-                <input type="password" class="textInput" placeholder="Enter Password" name="psw" required><br>
+                <input type="password" class="textInput" placeholder="Enter Password" name="psw" id="psw" required><br>
 
-                <button type="submit" class="btn-green" id="loginSub">Login</button>
+                <input type="submit" class="btn-green" id="loginSub" value="Login"></input>
                 <button type="button" class="btn-blue" id="loginCan" onclick="closeForm()">Cancel</button>
             </form>
         </div>
         <div class="row">
-            <div class="col-sm-2" id="gameList" style="  position: fixed;top: 62.5;left: 0;height: 100vh; width: 19%;">
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <div style="text-align:center;">
-                            <button class="btn-blue" id="loginGameList" onclick="openForm()">Login</button>
-
-
-
-
-                            <script>
-                                function openForm() {
-                                    document.getElementById("myForm").style.display = "block";
-                                    $("#myForm").hide();
-                                    $("#myForm").fadeIn(300);
-                                }
-
-                                function closeForm() {
-                                    $("#myForm").fadeOut(300);
-                                }
-                            </script>
-                        </div>
-                    </div>
-                    <div class="col-sm-2"></div>
-                </div>
-                <div class="row">
-                    <h1 class="h1-white" style="background-color:#3a2e43; margin-bottom:0;">Unsere Spiele</h1>
-                </div>
-                <div>
-                    <div class="row darkRow">
-                        <a class="gameLink" href="index.php">Moodle Jump</a>
-                    </div>
-                    <div class="row  lightRow">
-                        <a class="gameLink" href="index.php">Pong</a>
-                    </div>
-                    <div class="row darkRow">
-                        <a class="gameLink" href="index.php">Memory</a>
-                    </div>
-                    <div class="row  lightRow">
-                        <a class="gameLink" href="index.php">Tic-Tac-Toe</a>
-                    </div>
-                    <div class="row darkRow">
-                        <a class="gameLink" href="index.php">Snake</a>
-                    </div>
-                    <div class="row lightRow">
-                        <a class="gameLink" href="index.php">Bubbles</a>
-                    </div>
-                    <div class="row darkRow">
-                        <a class="gameLink" href="index.php">Anygame</a>
-                    </div>
-                    <div class="row lightRow">
-                        <a class="gameLink" href="index.php">Anygame</a>
-                    </div>
-                </div>
-            </div>
-
-
+            <?php
+            include("VerticalMenu.php");
+             ?>
             <div class="col-sm-10" style="width: 81%;margin-left: 19%;">
 
                 <!-- Carousel der Homepage mit Spielen -->
@@ -220,7 +168,7 @@
                             <div id="" container>
                                 <h4><b>Spiel4</b></h4>
                                 <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
-                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br </p>
+                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br> </p>
                                     <a></a>
                             </div>
                         </div>
@@ -267,49 +215,7 @@
                             <img src="Technikum.jpg" alt="" class="gridImg">
                         </div>
                     </div>
-                    <div class="row" style="margin-top:5rem; background-color:#3a2e43;">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2">
-                            <ul>
-                                <h3 class="h3-white">Über uns</h3>
-                                <a class="li-white">Impressum</a><br>
-                                <a class="li-white">Hilfe</a><br>
-                                <a class="li-white">Datenschutz</a><br>
-                                <a class="li-white">Forum</a><br>
-                                <a class="li-white">FAQ</a><br>
-                                <a class="li-white">Geschichte</a><br>
-                                <a class="li-white">Allgemeine Geschäftsgedingungen</a><br>
-                            </ul>
-                        </div>
-                        <div class="col-sm-2">
-                            <ul>
-                                <h3 class="h3-white">Konto</h3>
-                                <a class="li-white">Profil</a><br>
-                                <a class="li-white">Datenschutz</a><br>
-                                <a class="li-white">Kennwort ändern</a><br>
-                                <a class="li-white">Nutzername ändern</a><br>
-                                <a class="li-white">Persönliche Daten</a><br>
-                                <a class="li-white">Trophäen</a><br>
-                            </ul>
-                        </div>
-                        <div class="col-sm-2">
-                            <ul>
-                                <h3 class="h3-white">Kontakt</h3>
-                                <a class="li-white">Mail:<br> d4games@gmx.at</a><br>
-                                <br>
-                                <a class="li-white">Hotline: <br>+43664123421</a><br>
-                            </ul>
-                        </div>
-                        <div class="col-sm-2">
-                            <ul>
-                                <h3 class="h3-white">Location</h3>
-                                <p class="centeredInfo-white-sm">FH-Technikum Wien,<br>
-                                    Hochstädtplatz-09,<br>
-                                    1200-Wien,<br>
-                                    Metro: Dresdner Straße
-                        </div>
-                        <div class="col-sm-2"></div>
-                    </div>
+                    <?php include("footer.php");?>
                 </div>
             </div>
 
