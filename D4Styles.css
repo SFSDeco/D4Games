@@ -13,6 +13,10 @@ h1{
 	text-align: left;
 }
 
+#submitButtonSignUp{
+	width: 60%;
+}
+
 /* The popup form - hidden by default */
 .form-popup {
 	text-align: center;
@@ -31,14 +35,17 @@ h1{
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
-border-radius: 1rem;
-  max-width: 800px;
-  width: 20rem;
-  padding: 10px;
-  height: 28rem;
+	border-radius: 1rem;
+  	max-width: 800px;
+  	width: 20rem;
+  	padding: 10px;
+  	height: 28rem;
 }
 
-
+.UserMenu{
+	background-color: midnightblue;
+margin-top: 25rem;;
+}
 body{
 background-color: #463751;
 padding-top:62.5px}
