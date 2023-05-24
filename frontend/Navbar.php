@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
-        <a class="navbar-brand navbar-logo" href="#">D4GAMES</a>
+        <a class="navbar-brand navbar-logo" href="index.php">D4GAMES</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
         </button>
@@ -7,16 +7,18 @@
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item ">
-                    <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i>Homepage</a>
+                    <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i>Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="SignUp.php"><i class="fas fa-tachometer-alt"></i>Sign Up</a>
-                </li>
-				<?php 
+
+				<?php
 				if(isset($_SESSION["Loggedin"])){
 					if($_SESSION["Loggedin"]==true){
 						echo'<li class="nav-item">
 						<a class="nav-link" href="Profile.php"><i class="fas fa-tachometer-alt"></i>Profile</a>
+					</li>';
+					}else{
+						echo'<li class="nav-item" id="SignUpItem">
+						<a class="nav-link" href="SignUp.php"><i class="fas fa-tachometer-alt"></i>Sign Up</a>
 					</li>';
 					}
 				}
@@ -67,10 +69,10 @@ function test(){
 	});
 }
 $(document).ready(function(){
-	setTimeout(function(){ test(); });
+	setTimeout(function(){ test(); },);
 });
 $(window).on('resize', function(){
-	setTimeout(function(){ test(); }, 500);
+	setTimeout(function(){ test(); }, 200);
 });
 $(".navbar-toggler").click(function(){
 	$(".navbar-collapse").slideToggle(300);
@@ -94,14 +96,10 @@ jQuery(document).ready(function($){
 	target.parent().addClass('active');
 });
 
-
-
-
-// Add active class on another page linked
-// ==========================================
  $(window).on('load',function () {
      var current = location.pathname;
      console.log(current);
+	 console.log("TEST");
      $('#navbarSupportedContent ul li a').each(function(){
          var $this = $(this);
          // if the current path is like this link, make it active
@@ -110,7 +108,6 @@ jQuery(document).ready(function($){
              $this.parents('.menu-submenu').addClass('show-dropdown');
              $this.parents('.menu-submenu').parent().addClass('active');
          }else{
-             $this.parent().removeClass('active');
          }
      })
  });

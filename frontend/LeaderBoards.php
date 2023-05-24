@@ -1,4 +1,3 @@
-<?php include("login.php"); ?>
 <!DOCTYPE html>
 <html>
 
@@ -13,14 +12,18 @@
     <link rel="stylesheet" href="D4Styles.css">
     <title>D4GAMES</title>
 </head>
+
 <body>
-        <div class="container-fluid">
-        <div calss="row"> <?php include("NavBar.php");?></div>
-        <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4"><?php include("LeaderBoards.php");?></div>
-                <div class="col-sm-4"></div>
+    <div class="col-sm-2" id="LeaderBoards">
+        <div class="container">
+            <div class="row">
+                <h1 class="h1-white" style="background-color:#3a2e43; margin-bottom:0; text-align:center;">LeaderBoards</h1>
+            </div>
+            <div class="row darkRow">
+                <p class="centeredInfo-white">Michael</p>
+            </div>
         </div>
-        </div>
-<?php include("footer.php");?>
+    </div>
 </body>
+
+</html>
