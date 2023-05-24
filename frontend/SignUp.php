@@ -8,17 +8,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <link rel="stylesheet" href="D4Styles.css">
+        <script src="IndexScript.js"></script>
         <title>D4GAMES</title>
     <!--TODO: PHP Implementation! -->
 </head>
 <body>
 <div calss="row"> <?php include("NavBar.php");?></div>
-    <div class="container-fluid">
+        
         <div class = "row">
         <div class = "col-sm-4"></div>
         <div class = "col-sm-4">
         <form class="formstyling" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="row-auto">
+                    
                     <h1 class="h1-white">Sing-Up</h1>
                 </div>
                 <div class="row-auto">
@@ -33,8 +35,8 @@
                 </select><br><br>
                 </div>
                 <div class="row-auto">
-                    <label for="password" class="inputLabel">Birth-Date:</label><br>
-                    <input type="date" name="password" id="password" class="textInput" placeholder="Password" required>
+                    <label for="birthDate" class="inputLabel">Birth-Date:</label><br>
+                    <input type="date" name="birthDate" id="birthDate" class="birthDate" placeholder="birthDate" required>
                 </div>
                 <div class="row-auto">
                     <label for="firstname" class="inputLabel">First Name:</label><br>
@@ -57,6 +59,10 @@
                 <div class="row-auto">
                     <label for="password" class="inputLabel">Password:</label><br>
                     <input type="password" name="password" id="password" class="textInput" placeholder="Password" required>
+                </div>
+                <div class="row-auto">
+                    <label for="passwordRepeat" class="inputLabel">Repeat Password:</label><br>
+                    <input type="passwordRepeat" name="passwordRepeat" id="passwordRepeat" class="textInput" placeholder="Password" required>
                 </div>
 
                 <div class="row-auto">

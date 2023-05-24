@@ -1,4 +1,4 @@
-<?php  include("login.php");?>
+<?php include("login.php"); ?>
 <!DOCTYPE html>
 <html>
 
@@ -23,13 +23,13 @@
     </div>
 
     <div class="container-fluid">
-
         <div class="form-popup" id="myForm">
             <form action="index.php" class="form-container" method="POST">
                 <h1 class="h1-white">Login</h1>
 
                 <label for="username" class="inputLabel"><b>Username</b></label><br>
-                <input type="text" class="textInput" placeholder="Enter Username" name="username" id="username" required><br>
+                <input type="text" class="textInput" placeholder="Enter Username" name="username" id="username"
+                    required><br>
 
                 <label for="psw" class="inputLabel"><b>Password</b></label><br>
                 <input type="password" class="textInput" placeholder="Enter Password" name="psw" id="psw" required><br>
@@ -41,8 +41,8 @@
         <div class="row">
             <?php
             include("VerticalMenu.php");
-             ?>
-            <div class="col-sm-10" style="width: 81%;margin-left: 19%;">
+            ?>
+            <div class="col-sm-10" style="width: autp;margin-left: auto;">
 
                 <!-- Carousel der Homepage mit Spielen -->
                 <div class="row" id="carouselRow">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Snake.png" class="d-block w-100" alt="...">
+                                <img src="Images/Snake.png" class="d-block w-100" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h4>Spiele für die Gesamte Familie</h4>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="PongTobi.png" class="d-block w-100" alt="...">
+                                <img src="Images/PongTobi.png" class="d-block w-100" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h4>Spiele für die Gesamte Familie</h4>
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="Memory.png" class="d-block w-100" alt="...">
+                                <img src="Images/Memory.png" class="d-block w-100" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h4>Spiele für die Gesamte Familie</h4>
@@ -103,74 +103,70 @@
 
                     <div class="col-sm-2">
                         <div class="card">
-                            <img src="Bubbles.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <img src="Images/Bubbles.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Bubbles</b></h4>
-                                <p>Spielen sie den Klassiker Bubbles kostenlost und völlig ohne Werbung <br>Erzielen sie
-                                    neue Highscores und sammeln Sie Trophäen <br> <br </p>
-                                    <a></a>
+                                <p>Spielen sie den Klassiker Bubbles kostenlost und völlig ohne Werbung <br>Erzielen
+                                    sie
+                                    neue Highscores und sammeln Sie Trophäen <br> <br> </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="card">
-                            <img src="Memory.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Memory</b></h4>
-                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
-                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br </p>
-                                    <a></a>
+                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für
+                                    klein
+                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br> </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="card">
-                            <img src="Snake.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <img src="Images/Snake.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Snake</b></h4>
                                 <p>Alltbekannt und altbweährt, Snake bietet mit simplen Mechaniken großen Spielspaß.
                                     Inspirert von der Legendären Vorlage bieten wir eine ganz eigene Version</p>
-                                <a></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="card">
-                            <img src="PongTobi.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <img src="Images/PongTobi.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Pong</b></h4>
-                                <p>Jeder kennt es und die meisten lieben es, Pong ist eines der Erfolgreichesten Spiele
+                                <p>Jeder kennt es und die meisten lieben es, Pong ist eines der Erfolgreichesten
+                                    Spiele
                                     allerzeiten und wird auch heute noch täglich von einer vielzahl von Personen
                                     gespielt</p>
-                                <a></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="card">
-                            <img src="Memory.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Spiel4</b></h4>
-                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
-                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br </p>
-                                    <a></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="card">
-                            <img src="Memory.png" alt="Avatar" style="width:100%" id="CardImg">
-                            <div id="" container>
-                                <h4><b>Spiel4</b></h4>
-                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
+                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für
+                                    klein
                                     und Groß <br>mit der gesamten Familie spaß zu haben <br> <br> </p>
-                                    <a></a>
                             </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card" onClick="handleCardClick()">
+                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <h4><b>Spiel4</b></h4>
+                            <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
+                                und Groß mit der gesamten Familie Spaß zu haben.</p>
                         </div>
                     </div>
                 </div>
@@ -178,47 +174,53 @@
                     <h1 class="h1-white" id="oneSem">ONE SEMESTER D4GAMES</h1>
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <p class="centeredInfo-white">D4Games was founded at the beginning of this semester and has been
-                            growing steadily since then. Our contributors work daily to improve the experience on our
+                        <p class="centeredInfo-white-mid">D4Games was founded at the beginning of this semester and
+                            has been
+                            growing steadily since then. Our contributors work daily to improve the experience on
+                            our
                             site and reduce bugs. D4Games was founded at the beginning of this semester and has been
-                            growing steadily since then. Our contributors work daily to improve the experience on our
+                            growing steadily since then. Our contributors work daily to improve the experience on
+                            our
                             site and reduce bugs. D4Games was founded at the beginning of this semester and has been
-                            growing steadily since then. Our contributors work daily to improve the experience on our
+                            growing steadily since then. Our contributors work daily to improve the experience on
+                            our
                             site and reduce bugs.</p>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
                 <div class="row" style="margin-top:5rem;">
                     <div class="col-sm-6">
-                        <img src="SouthPark.png" alt="" class="gridImg">
+                        <img src="Images/SouthPark.png" alt="" class="gridImg-left">
                     </div>
                     <div class="col-sm-6">
-                        <h1 class="h1-white" style="margin-top:10%;">Our History</h1>
+                        <h1 class="h1-white">Our History</h1>
                         <p class="centeredInfo-white-bold">We at D4Games are passionate gamers and we want people
                             without powerful hardware to be able to enjoy computer games as well.<br> That's why we
-                            decided to found D4Games.<br> For a semester now, we have been working to provide our users
-                            with a comprehensive online experience without setting paywalls or incurring other costs.
+                            decided to found D4Games.<br> For a semester now, we have been working to provide our
+                            users
+                            with a comprehensive online experience without setting paywalls or incurring other
+                            costs.
                         </p>
                     </div>
                 </div>
-                <div class="row" style="margin-top:5rem;">
-                    <div class="row" style="margin-top:5rem;">
-                        <div class="col-sm-6">
-                            <h1 class="h1-white" style="margin-top:10%;">Inspired by Education</h1>
-                            <p class="centeredInfo-white-bold">We at D4Games are passionate gamers and we want people
-                                without powerful hardware to be able to enjoy computer games as well.<br> That's why we
-                                decided to found D4Games.<br> For a semester now, we have been working to provide our
-                                users with a comprehensive online experience without setting paywalls or incurring other
-                                costs.</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="Technikum.jpg" alt="" class="gridImg">
-                        </div>
-                    </div>
-                    <?php include("footer.php");?>
-                </div>
-            </div>
 
+                <div class="row" style="margin-top:5rem;">
+                    <div class="col-sm-6">
+                        <h1 class="h1-white">Inspired by Education</h1>
+                        <p class="centeredInfo-white-bold">We at D4Games are passionate gamers and we want people
+                            without powerful hardware to be able to enjoy computer games as well.<br> That's why we
+                            decided to found D4Games.<br> For a semester now, we have been working to provide our
+                            users with a comprehensive online experience without setting paywalls or incurring other
+                            costs.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="Images/Technikum.jpg" alt="" class="gridImg-right">
+                    </div>
+                </div>
+                <?php include("footer.php"); ?>
+
+            </div>
+        </div>
 </body>
 
 </html>

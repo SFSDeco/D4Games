@@ -21,5 +21,19 @@ if (isset($UserPasswordHashed)) {
         $_SESSION["Loggedin"] = true;
     }
 }
+
+function singUp(){
+    $birthDate = $_POST["birthDate"];
+    $salutation = $_POST["salutation"];
+    $firstName = $_POST["firstname"];
+    $lastName = $_POST["lastname"];
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $password = hash('sha256',$_POST["password"]);
+    $passwordRepeat = hash('sha256',($_POST["passwordRepeat"]));
+    if($password == $passwordRepeat){
+        //User in DB einfügen mir ajax Call, sodass die Seite nich neu geladen werdn muss;
+    }
+}
 ?>
 

@@ -9,8 +9,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="D4Styles.css">
         <title>D4-Impressum</title>
+        <script src="IndexScript.js"></script>
 </head>
-
 <body>
         <div calss="row">
                 <?php include("NavBar.php"); ?>
@@ -22,94 +22,94 @@
                         <div class="row">
                         </div>
                         <div class="row">
-                                <h2 class="h1-white">Wie kann ich auf D4 Games Spielen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich auf D4 Games Spielen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Gibt es bei D4Games versteckte Kosten?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Gibt es bei D4Games versteckte Kosten?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Nutzerdaten Ändern?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich meine Nutzerdaten Ändern?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
-                                <h2 class="h1-white">Wie kann ich auf D4 Games Spielen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
-                                        Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
-                                        ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
-                                        Ihnen unsere
-                                        volle Auswahl an kostenlosen Spielen bereit.
-                                </p>
-
-                                <h2 class="h1-white">Gibt es bei D4Games versteckte Kosten?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich auf D4 Games Spielen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Gibt es bei D4Games versteckte Kosten?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Nutzerdaten Ändern?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
-                                        Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
-                                        ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
-                                        Ihnen unsere
-                                        volle Auswahl an kostenlosen Spielen bereit.
-                                </p>
-                                <h2 class="h1-white">Wie kann ich auf D4 Games Spielen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Gibt es bei D4Games versteckte Kosten?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich meine Nutzerdaten Ändern?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                        Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
+                                        ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
+                                        Ihnen unsere
+                                        volle Auswahl an kostenlosen Spielen bereit.
+                                </p>
+                                <h2 class="h1-white-bg">Wie kann ich auf D4 Games Spielen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Gibt es bei D4Games versteckte Kosten?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
                                         volle Auswahl an kostenlosen Spielen bereit.
                                 </p>
 
-                                <h2 class="h1-white">Wie kann ich meine Nutzerdaten Ändern?</h2>
-                                <p>Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                <h2 class="h1-white-bg">Wie kann ich meine Trophäen und Scores Ansehen?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
+                                        Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
+                                        ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
+                                        Ihnen unsere
+                                        volle Auswahl an kostenlosen Spielen bereit.
+                                </p>
+
+                                <h2 class="h1-white-bg">Wie kann ich meine Nutzerdaten Ändern?</h2>
+                                <p class="centeredInfo-white">Um kostenlos auf unserer Seite Spielen zu können müssen sie sich Anmelden.
                                         Besitzen sie noch kein Konto bei D4Games können sie unter dem Reiter SignUp
                                         ein Konto anlegen und sich direkt danach Anmelden. Sind sie angemeldet steht
                                         Ihnen unsere
@@ -118,7 +118,8 @@
                         </div>
                 </div>
                 <div class="col-sm-3"></div>
-
         </div>
         <?php include("footer.php"); ?>
 </body>
+
+
