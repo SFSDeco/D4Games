@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -36,37 +37,41 @@
                 <a class="gameLink" href="DoodleJump.php">Moodle Jump</a>
             </div>
             <div class="row  lightRow">
-                <a class="gameLink" href="index.php">Pong</a>
+                <a class="gameLink" href="StickHero.php">Stick Hero</a>
             </div>
             <div class="row darkRow">
-                <a class="gameLink" href="index.php">Memory</a>
+                <a class="gameLink" href="solitaire.php">Solitaire</a>
             </div>
             <div class="row  lightRow">
-                <a class="gameLink" href="index.php">Tic-Tac-Toe</a>
+                <a class="gameLink" href="demon.php">Tic-Tac-Toe</a>
             </div>
             <div class="row darkRow">
-                <a class="gameLink" href="index.php">Snake</a>
+                <a class="gameLink" href="Snake.php">Snake</a>
             </div>
             <div class="row lightRow">
-                <a class="gameLink" href="index.php">Bubbles</a>
+                <a class="gameLink" href="chess.php">Chess</a>
             </div>
             <div class="row darkRow">
-                <a class="gameLink" href="index.php">Anygame</a>
+                <a class="gameLink" href="Pong.php">Pong</a>
             </div>
             <div class="row lightRow">
-                <a class="gameLink" href="index.php">Anygame</a>
+                <a class="gameLink" href="minesweeper.php">Minesweeper</a>
             </div>
 
             <div class="row" id="UserMenu">
                 <div class="col-sm-12">
-                    <button class="MenuBtn">
+                <a href="Profile.php" style="text-decoration:none;">
+                    <button class="MenuBtn" href="Profile.php">
                         <img src="Images/Settings.png" alt="" class="MenuImg">
                         <span class="button-text">Settings</span>
                     </button>
+                    </a>
+                    <a href="Hilfe.php" style="text-decoration:none;">
                     <button class="MenuBtn">
                         <img src="Images/Support.png" alt="" class="MenuImg"> <span class="button-text">Support</span>
                     </button>
-                    <button class="MenuBtn">
+                    </a>
+                    <button class="MenuBtn" onclick="logoutUser()">
                         <img src="Images/Logout.png" alt="" class="MenuImg"> <span class="button-text">Logout</span>
                     </button>
                 </div>

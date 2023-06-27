@@ -1,7 +1,8 @@
-<?php include("login.php"); ?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +10,10 @@
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="IndexScript.js"></script>
+    <script src="indexScript.js"></script>
     <link rel="stylesheet" href="D4Styles.css">
     <title>D4GAMES</title>
 </head>
-
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -21,12 +21,10 @@
     <div calss="row">
         <?php include("NavBar.php"); ?>
     </div>
-
     <div class="container-fluid">
-        <div class="form-popup" id="myForm">
-            <form action="index.php" class="form-container" method="POST">
+        <form class="form-popup" id="myForm">
+            <div class="form-container">
                 <h1 class="h1-white">Login</h1>
-
                 <label for="username" class="inputLabel"><b>Username</b></label><br>
                 <input type="text" class="textInput" placeholder="Enter Username" name="username" id="username"
                     required><br>
@@ -34,16 +32,15 @@
                 <label for="psw" class="inputLabel"><b>Password</b></label><br>
                 <input type="password" class="textInput" placeholder="Enter Password" name="psw" id="psw" required><br>
 
-                <input type="submit" class="btn-green" id="loginSub" value="Login"></input>
+                <input type="button" class="btn-green" id="loginSub" onclick="loginUser()" value="Login"></input>
                 <button type="button" class="btn-blue" id="loginCan" onclick="closeForm()">Cancel</button>
-            </form>
-        </div>
+                </div>
+        </form>
         <div class="row">
             <?php
             include("VerticalMenu.php");
             ?>
             <div class="col-sm-10" style="width: autp;margin-left: auto;">
-
                 <!-- Carousel der Homepage mit Spielen -->
                 <div class="row" id="carouselRow">
                     <div id="carouselExampleCaptions" class="carousel slide">
@@ -55,29 +52,29 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Images/Snake.png" class="d-block w-100" alt="...">
+                                <img src="Images/Snake.png" class="d-block w-100" id="CarouImg" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h4>Spiele für die Gesamte Familie</h4>
-                                    <h2>Spielen sie die Klassiker von Früher</h2>
-                                    <p>Some representative placeholder content for the first slide.</p>
+                                    <h4>Games for the whole Family</h4>
+                                    <h2>PLAY CLASSICS LIKE SNAKE</h2>
+                                    <p>Do you have enough skill to set a new highscore?</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/PongTobi.png" class="d-block w-100" alt="...">
+                                <img src="Images/PongTobi.png" class="d-block w-100" id="CarouImg" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h4>Spiele für die Gesamte Familie</h4>
-                                    <h2>Spiele für die Gesamte Familie</h2>
+                                    <h4>Games for the whole family</h4>
+                                    <h2>PLAY THE CLASSICS OF THE PAST</h2>
                                     <p>Some representative placeholder content for the second slide.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/Memory.png" class="d-block w-100" alt="...">
+                                <img src="Images/MoodleJumpCard.png" class="d-block w-100" id="CarouImg" alt="...">
                                 <div class="overlay"> </div>
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h4>Spiele für die Gesamte Familie</h4>
-                                    <h2>Kompetetive Online Games</h2>
+                                    <h4>Games for the whole family</h4>
+                                    <h2>COMPETETIVE ONLINE GAMES</h2>
                                     <p>Some representative placeholder content for the third slide.</p>
                                 </div>
                             </div>
@@ -96,77 +93,71 @@
                 </div>
 
                 <div class="row">
-                    <h1 class="h1-white" id="ourGames-h1"> UNSERE AUSWAHL AN GRANDIOSEN SPIELEN:</h1>
+                    <h1 class="h1-white" id="ourGames-h1">OUR SELECTION OF STUNNING GAMES:</h1>
                 </div>
 
                 <div class="row">
 
                     <div class="col-sm-2">
-                        <div class="card">
-                            <img src="Images/Bubbles.png" alt="Avatar" style="width:100%" id="CardImg">
+                        <div class="card" onClick="handleCardClick('Chess')">
+                            <img src="Images/ChessCard.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
-                                <h4><b>Bubbles</b></h4>
-                                <p>Spielen sie den Klassiker Bubbles kostenlost und völlig ohne Werbung <br>Erzielen
-                                    sie
-                                    neue Highscores und sammeln Sie Trophäen <br> <br> </p>
+                                <h4><b>Chess</b></h4>
+                                <p>Play the Classics like Snake and set new Highsocores <br>Get new Highscores and Tropies <br> <br> </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
-                        <div class="card">
-                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
+                        <div class="card" onClick="handleCardClick('Moodle Jump')">
+                            <img src="Images/MoodleJumpCard.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
-                                <h4><b>Memory</b></h4>
-                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für
-                                    klein
-                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br> </p>
+                                <h4><b>Moodle Jump</b></h4>
+                                <p>Play the classic Moodle Jump game and rise to new heights
+                                    This <br>game brings you right back to your childhood<br> <br> </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
-                        <div class="card">
+                        <div class="card" onClick="handleCardClick('Snake')">
                             <img src="Images/Snake.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Snake</b></h4>
-                                <p>Alltbekannt und altbweährt, Snake bietet mit simplen Mechaniken großen Spielspaß.
-                                    Inspirert von der Legendären Vorlage bieten wir eine ganz eigene Version</p>
+                                <p>Well-known and time-tested, Snake provides great gameplay with simple mechanics. Inspired by the legendary original, we offer our own unique version.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
-                        <div class="card">
+                        <div class="card" onClick="handleCardClick('Pong')">
                             <img src="Images/PongTobi.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
                                 <h4><b>Pong</b></h4>
-                                <p>Jeder kennt es und die meisten lieben es, Pong ist eines der Erfolgreichesten
-                                    Spiele
-                                    allerzeiten und wird auch heute noch täglich von einer vielzahl von Personen
-                                    gespielt</p>
+                                <p>Everbody knows it and everybody loves it, Pong is one of the most succesful
+                                    games
+                                    ever and is also played by thousands of people every day.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-2">
-                        <div class="card">
-                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
+                        <div class="card" onClick="handleCardClick('Solitaire')">
+                            <img src="Images/SolitaireCard.png" alt="Avatar" style="width:100%" id="CardImg">
                             <div id="" container>
-                                <h4><b>Spiel4</b></h4>
-                                <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für
-                                    klein
-                                    und Groß <br>mit der gesamten Familie spaß zu haben <br> <br> </p>
+                                <h4><b>Solitaire</b></h4>
+                                <p>Play the classic Solitair game right on our website and without any adds
+                                    or payments<br>So lets go! Have fun!<br> <br> </p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-sm-2">
-                        <div class="card" onClick="handleCardClick()">
-                            <img src="Images/Memory.png" alt="Avatar" style="width:100%" id="CardImg">
-                            <h4><b>Spiel4</b></h4>
-                            <p>Mit dem allseits bekannten Gesellschaftsspiel bieten wir eine Möglichkeit für klein
-                                und Groß mit der gesamten Familie Spaß zu haben.</p>
+                        <div class="card" onClick="handleCardClick('StickHero')">
+                            <img src="Images/StickHeroCard.png" alt="Avatar" style="width:100%" id="CardImg">
+                            <h4><b>Stick Hero</b></h4>
+                            <p>This Classic Mobile Game was reimagened by us and brought to the Browser
+                                completely add free and without any paywalls.</p>
                         </div>
                     </div>
                 </div>

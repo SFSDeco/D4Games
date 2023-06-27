@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,8 @@
     <!--TODO: PHP Implementation! -->
 </head>
 
-<body>
+<body onload="loadProfil()">
+
     <div calss="row">
         <?php include("NavBar.php"); ?>
     </div>
@@ -30,13 +32,12 @@
             <div class="col-sm-8 ProfileGrid">
                 <div class="row">
                     <div class="col-sm-12">
-                        <form class="formstyling leftProfileForm topProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm topProfileForm" >
                             <div class="col-sm-12">
                                 <label for="username" class="inputLabel">Username:</label><br>
                                 <input type="text" name="username" id="username" class="textInput"
                                     placeholder="AngryBear123" required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterUsername()">
                                     Submit
                                 </button>
                             </div>
@@ -46,8 +47,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="salutation" class="inputLabel">Salutation:</label><br>
                                 <select name="salutation" id="salutation">
@@ -56,31 +56,29 @@
                                     <option value="Ms">Ms.</option>
                                     <option value="Div">Div.</option>
                                 </select><br><br><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterSalutation()">
                                     Submit
                                 </button>
                             </div>
                         </form>
 
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="firstname" class="inputLabel">First Name:</label><br>
                                 <input type="text" name="firstname" id="firstname" class="textInput" placeholder="John"
                                     required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterFirstname()">
                                     Submit
                                 </button>
                             </div>
                         </form>
 
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="email" class="inputLabel">Email:</label><br>
                                 <input type="email" name="email" id="email" class="textInput"
                                     placeholder="example@technikum.at" required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterEmail()">
                                     Submit
                                 </button>
                             </div>
@@ -91,47 +89,43 @@
 
 
                     <div class="col-sm-6">
-
-
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="birthDate" class="inputLabel">Birth-Date:</label><br>
                                 <input type="date" name="birthDate" id="birthDate" class="textInput"
                                     placeholder="birthDate" required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterBirthDate()">
                                     Submit
                                 </button>
                             </div>
                         </form>
 
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="lastname" class="inputLabel">Last Name:</label><br>
                                 <input type="text" name="lastname" id="lastname" class="textInput" placeholder="Miller"
                                     required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterLastname()">
                                     Submit
                                 </button>
                             </div>
-
                         </form>
 
-                        <form class="formstyling leftProfileForm" method="POST"
-                            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form class="formstyling leftProfileForm" >
                             <div class="col-sm-12">
                                 <label for="password" class="inputLabel">Password:</label><br>
                                 <input type="password" name="password" id="password" class="textInput"
                                     placeholder="Password" required>
                                 <input type="repeatpassword" name="repeatpassword" id="repeatpassword" class="textInput"
                                     placeholder=" Repeat Password" required><br>
-                                <button type="submit" class="btn-green">
+                                <button type="button" class="btn-green" onclick="alterPassword()">
                                     Submit
                                 </button>
                             </div>
                         </form>
+
                     </div>
+                    
                 </div>
                 <div class="row" style="display:flex; justify-content: center;">
                 <button class="btn-red" style="margin-top:1rem; width:30rem; height:4rem; font-size:2rem; padding:0;" onclick="askForDelete()">Delete Account</button>
@@ -144,8 +138,8 @@
     <div class="form-popup" id="myFormDelete">
             <form action="index.php" class="form-containerProfile" method="POST">
                 <h2 class="h1-white">Do you really want to delete your Account?</h2>
-                <button type="button"  class="btn-blue" id="loginCan" onclick="closeFormDelete()">Cancel</button>
                 <input type="submit" class="btn-red" id="loginSub" value="Delete"></input>
+                <button type="button"  class="btn-blue" id="loginCan" onclick="closeFormDelete()">Cancel</button>
             </form>
     </div>
     <?php include("footer.php"); ?>

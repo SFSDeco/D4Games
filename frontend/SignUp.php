@@ -18,9 +18,9 @@
         <div class = "row">
         <div class = "col-sm-4"></div>
         <div class = "col-sm-4">
-        <form class="formstyling" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form class="formstyling" method="POST" action="register.php">
                 <div class="row-auto">
-                    
+
                     <h1 class="h1-white">Sing-Up</h1>
                 </div>
                 <div class="row-auto">
@@ -67,7 +67,7 @@
 
                 <div class="row-auto">
                     <label for="submit"></label>
-                    <input class="btn-green" type="submit" id="submitButtonSignUp" name="btnSubmit" value="Submit">
+                    <input class="btn-green" type="button" id="submitButtonSignUp" name="btnSubmit" onclick="signUp()" value="Submit">
                 </div>
             </form>
         </div>

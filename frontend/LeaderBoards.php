@@ -13,17 +13,8 @@
     <title>D4GAMES</title>
 </head>
 
-<body>
+<body onload="loadLeaderboard()">
     <div class="col-sm-2" id="LeaderBoards">
-        <div class="container">
-            <div class="row">
-                <h1 class="h1-white" style="background-color:#3a2e43; margin-bottom:0; text-align:center;">LeaderBoards</h1>
-            </div>
-            <div class="row darkRow">
-                <p class="centeredInfo-white">Michael</p>
-            </div>
-        </div>
     </div>
 </body>
-
 </html>
