@@ -14,17 +14,16 @@ class Scores {
 
 
 class Player {
-
   public $id;
   public $firstname;
   public $lastname;
-  
+  public $username;
 
 
-  function __construct($id, $firstname, $lastname) {
+  function __construct($id, $firstname, $lastname, $username) {
     $this->id = $id;
     $this->firstname = $firstname;
     $this->lastname = $lastname;
-    
+    $this->username = $username;
   }
 }
