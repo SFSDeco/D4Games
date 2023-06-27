@@ -51,7 +51,8 @@ evalLegal();
 //call evalPos again to reset sight after checking legality
 evalPos();
 
-console.log(legalMoves);
+//uncomment below code to test legalMoves
+//console.log(legalMoves);
 
 function gameSetup(){
     $("#queenBtn").hide();
@@ -97,6 +98,7 @@ let pieceIndex;
 let destinIndex;
 let movedPiece;
 
+//add EventListeneres onto every field of the gameboard
 gameboard.forEach(field => {
     field.addEventListener("dragstart", dragStart)
     field.addEventListener("dragover", dragOver)
@@ -104,9 +106,11 @@ gameboard.forEach(field => {
 })
 
 function dragStart(e){
+    //moved Piece gets the visualized form of the piece
     movedPiece = e.target;
     initialPosition[0] = movedPiece.parentNode.getAttribute('square-file');
     initialPosition[1] = parseInt(movedPiece.parentNode.getAttribute('square-rank'));
+    //get the index of the piece within the array of the chessboard
     pieceIndex = chessBoard.findIndex(chessField => chessField.file == initialPosition[0] && chessField.rank == initialPosition[1]);
 };
 
@@ -116,6 +120,7 @@ function dragOver(e){
 
 function dragDrop(e){
     e.stopPropagation();
+    //target of the drop = destination position of the piece 
     const taken = e.currentTarget;
     destinPosition[0] = taken.getAttribute('square-file');
     destinPosition[1] = parseInt(taken.getAttribute('square-rank'));
@@ -129,9 +134,11 @@ function dragDrop(e){
         return;
     }
 
+    //if the piece variable != null, it's a capture move
     if(piece){
         console.log("Contains chess piece!");
         let movingPiece = chessBoard[pieceIndex].piece;
+        //if the move is contained in the legalMove array value of moveIsLegal != -1
         let moveIsLegal = legalMoves.findIndex(legalMove => legalMove.type == movingPiece.type &&
                                                             legalMove.initial_file == chessBoard[pieceIndex].file &&
                                                             legalMove.initial_rank == chessBoard[pieceIndex].rank &&
@@ -152,6 +159,7 @@ function dragDrop(e){
                 }
             }
             piece.remove();
+            //Pawn Promotion
             if(tempPiece.type=="p" && (destinIndex<8 || destinIndex>55)){
                 movedPiece.innerHTML = queen;
                 if(destinIndex<8)
@@ -206,7 +214,7 @@ function dragDrop(e){
         }
 
     }
-    //OLD ALGORITHM
+    //OLD ALGORITHM FOR REFERENCE
     /*if(piece){
         console.log("Contains chess piece!");
         if(chessBoard[pieceIndex].piece.type === "K" && chessBoard[pieceIndex].piece.OPTlegalMove(initialPosition, destinPosition, true)){
@@ -326,14 +334,17 @@ function dragDrop(e){
     }*/
 };
 
+//nextTurn increases the turn counter, then evaluates the Position, then evaluates all legal Moves for the current Player
 function nextTurn(){
     currturn++;
     evalPos();
     evalLegal();
-    console.log(legalMoves);
+
+    //uncomment for legal move debugging
+    /*console.log(legalMoves);
     chessBoard.forEach((chessField, i) => {
         if(!chessField.isEmpty() && chessField.piece.type === "Q") console.log(chessField.piece.sees);
-    });
+    });*/
 
 
 
@@ -357,6 +368,7 @@ function nextTurn(){
     }
 }
 
+//changes all draggable pieces depending on the turn
 function swapDraggable(){
     let allSquares = board.querySelectorAll('.square');
     allSquares.forEach((square, i ) =>{
@@ -369,6 +381,7 @@ function swapDraggable(){
     })
 }
 
+//checkSight uses current king Pos of Black and White to determine whether or not a move would lead to a check, returns true if yes
 function checkSight(kingBlack, kingWhite, turn){
     let incheck = false;
     evalPos();
@@ -398,6 +411,7 @@ function checkSight(kingBlack, kingWhite, turn){
     return incheck;
 }
 
+//calculates all seen squares for each piece
 function evalPos(){
     chessBoard.forEach((evalSquare, i) =>{
         let currPos = [2];
@@ -412,6 +426,7 @@ function evalPos(){
     })
 }
 
+//evaluates all Legal moves, by checking the seen squares and evaluating whether or not it would lead to the player's own King to stand in check
 function evalLegal(){
     legalMoves = [];
     chessBoard.forEach((square, i) =>{
@@ -815,6 +830,7 @@ function evalLegal(){
     });
 }
 
+//Unfinished Castle function for Castling functionality
 function checkCastle(){
     if(currturn%2){
         if(!chessBoard[0].piece.moved && chessBoard[1].isEmpty() && chessBoard[2].isEmpty());
@@ -824,7 +840,7 @@ function checkCastle(){
 
 
 
-
+//Returns file depending on the Modulo of the index
 function determineFile(i){
     switch(i%8){
         case 0:
