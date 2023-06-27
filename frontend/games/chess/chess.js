@@ -2,8 +2,14 @@ import Piece from "./pieces.js";
 import Field from "./field.js";
 
 
-/* TODO: put all possible Valid moves of the current turn into an array with the format {type:piece.type, destination_rank: rank, destination_file: file}
-They are only valid if the move does not result in the King being in check. If the size of the Array is 0, GameOver*/
+/* TODO: Proper Gameover sequence,
+RULES:
+En Passant
+Castling
+King restriction (always 1 square between)
+Promotion to piece other than Queen
+Algorithm
+*/
 
 let currturn = 0;
 let check = false;
