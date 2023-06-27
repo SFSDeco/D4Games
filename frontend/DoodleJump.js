@@ -36,7 +36,7 @@ function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-// fill the initial screen with platforms and items
+// filling the initial screen with platforms and items
 let y = platformStart;
 while (y > 0) {
   // the next platform can be placed above the previous one with a space
@@ -226,7 +226,7 @@ if (doodle.shield) {
     doodle.x = -doodle.width;
   }
 
-  // draw platforms
+  // place plattforms width calculated positions
   function fillRoundedRect(ctx, x, y, width, height, radius) {
     ctx.beginPath();
     ctx.moveTo(x + radius, y);
@@ -269,6 +269,8 @@ if (doodle.shield) {
       doodle.dy = bounceVelocity;
     }
   });
+
+  //draw Uplink Items
   items.forEach(function (item) {
     itemType++;
     context.drawImage(itemImage, item.x, item.y, itemSize, itemSize);
@@ -292,6 +294,8 @@ if (doodle.shield) {
       }
     }
   });
+  
+  //draw Star Items
   starItems.forEach(function (item) {
     itemType++;
     context.drawImage(itemImage1, item.x, item.y, itemSize, itemSize);
@@ -312,6 +316,7 @@ if (doodle.shield) {
     }
   });
 
+//draw Shield Items
   shieldItems.forEach(function (item) {
     itemType++;
     context.drawImage(shieldImage, item.x, item.y, itemSize, itemSize);
@@ -350,6 +355,7 @@ imageLeft.src = 'Images/NinjaJumper-modified.png';
     context.drawImage(imageRight, doodle.x, doodle.y, doodle.width, doodle.height);
 }
 
+//draw Shield Items
 shieldItems.forEach(function (item) {
   itemType++;
   context.drawImage(shieldImage, item.x, item.y, itemSize, itemSize);
@@ -490,6 +496,7 @@ function startGame(){
   $("#HalfScreenDoodleJump").hide();
 }
 
+//set Game Fullscreen
 function setFullScreen(){
   canvas.width=800;
   $("#Score").css("width","801px");
@@ -497,6 +504,8 @@ function setFullScreen(){
   $("#HalfScreenDoodleJump").show();
 }
 
+
+//set Game Halfscreen
 function setHalfScreen(){
   canvas.width=600;
   $("#Score").css("width","601px");
