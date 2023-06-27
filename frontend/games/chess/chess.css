@@ -1,0 +1,47 @@
+#board{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.square{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.square svg{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    position: absolute;
+    z-index: -9;
+}
+
+path{
+    position: absolute;
+    z-index: -10;
+}
+
+.piece{
+    position: relative;
+    z-index: 9;
+}
+
+.white{
+    background-color: white;
+}
+
+.red{
+    background-color: red;
+}
+
+.black{
+    fill: black;
+}
+
+.grey{
+    fill: lightcoral;
+}
