@@ -1,3 +1,5 @@
+
+// get Loggedin status and show Usermenu if true
 $(document).ready(function () {
     $("#UserMenu").hide();
     var navbarHeight = $('.navbar-mainbg').outerHeight();
@@ -17,6 +19,7 @@ $(document).ready(function () {
       });
 });
 
+//function for User Login
 function loginUser(){
     console.log("Clicked!");
     var userData = [];
@@ -36,11 +39,15 @@ function loginUser(){
     })
 };
 
+
+//function for opening Login form
 function openForm() {
     document.getElementById("myForm").style.display = "block";
     $("#myForm").hide();
     $("#myForm").fadeIn(300);
 }
+
+//functions for closing Login form
 function closeForm() {
     $("#myForm").fadeOut(300);
 }
@@ -51,6 +58,8 @@ function submitForm(){
 
 }
 
+
+//function to handel the clicks on the cards in the index.php
 function handleCardClick(gameName) {
     switch(gameName){
         case 'Pong':
@@ -84,12 +93,15 @@ function handleCardClick(gameName) {
     
 }
 
+//function to show the DeleteAccount form in the Profile.php
 function askForDelete(){
     document.getElementById("myFormDelete").style.display = "block";
     $("#myFormDelete").hide();
     $("#myFormDelete").fadeIn(300);
     
 }
+
+//function to send Sign-Up data to the Database
 function signUp(){
     let salutation = $("#salutation").val();
     let email = $("#email").val();
@@ -123,6 +135,10 @@ function signUp(){
     
 }
 
+
+//funtcion to load the Leaderboards from the database 
+//The gameId is a session variable that is used in the Backend to Load the
+//Leaderboards from the currently selected game
 function loadLeaderboard(){
     console.log("Entered");
     let leaderBoard = $("#LeaderBoards");
@@ -154,6 +170,8 @@ function loadLeaderboard(){
         }
     })
 }
+
+//function to load Profile data from the database
 function loadProfil(){
     $.ajax({
         type: "GET",
@@ -176,6 +194,10 @@ function loadProfil(){
     })
     
 }
+
+
+
+//below are functions to update userdata in the database
 
 function alterFirstname(){
     let firstname = $("#firstname").val();
@@ -292,6 +314,9 @@ function alterPassword(){
    
 }
 
+
+
+//funtcion to log the user out
 function logoutUser(){
     $.ajax({
         type: "GET",
