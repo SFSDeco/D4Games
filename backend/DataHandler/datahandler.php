@@ -17,6 +17,14 @@ class DataHandler
     }
 
 
+
+
+//Most of the functions in the datahandler get parameters from the Frontend and use the 
+//either to insert data in the database or query data in the database
+//functions with names like query, get, or search at the beginning are used to query data from the database
+//funtcions with names like insert, or set at the beginning are used to insert data in Database
+//functions with names like update or alter at the beginning are used to change data in the database
+
     //function to query a score by playerId
     public function queryScoresPerPlayer($param)
     {
