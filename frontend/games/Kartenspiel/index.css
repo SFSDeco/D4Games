@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+canvas {
+    display: block;
+    padding-top: 100px;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+}
+.row-auto{
+    text-align: center;
+    font-size: 50px;
+}
