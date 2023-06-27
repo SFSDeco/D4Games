@@ -1,4 +1,3 @@
-<!-- Zuweisen von Logindetails zum DB-Login -->
 <?php
 class DBaccess {
   private $host = "localhost";
