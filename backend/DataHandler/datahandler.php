@@ -87,7 +87,7 @@ class DataHandler
         return $data;
     }
 
-    
+    //backend function to log the user in
     public function loginUser($param){
         $username = $param[0]; $password = $param[1];
         if(!isset($_SESSION["Loggedin"])){
@@ -111,6 +111,7 @@ class DataHandler
         return "Did not work";
     }
 
+//backend function to get the Leaderboards from the Database
     public function getLeaders(){
         $result=[];
         $game = $_SESSION["game"];
@@ -133,6 +134,7 @@ class DataHandler
         return $result;
     }
 
+//function that gets a playername as parameter and returns the corresponding game
     public function getGameID($game){
         $invalid = -1;
         $sql = "SELECT id FROM games WHERE name LIKE '$game'";
@@ -144,6 +146,8 @@ class DataHandler
         }
         return $invalid;
     }
+
+    //function that gets username as parameter and returns corresponding userID
     public function getPlayerID($user){
         $invalid = -1;
         $sql = "SELECT id FROM persons WHERE username LIKE '$user'";
@@ -156,6 +160,7 @@ class DataHandler
         return $invalid;
     }
 
+    //function that inserts a score in the database
     public function setLeader($param){
         $gameid = $this->getGameID($_SESSION["game"]);
         $userid = $this->getPlayerID($_SESSION["username"]);
@@ -170,6 +175,7 @@ class DataHandler
         return "Invalid";
     }
 
+    //function to log the user out and destroy the session
     public function Logout(){
         if(isset($_SESSION["Loggedin"])){
             session_destroy();
@@ -179,6 +185,13 @@ class DataHandler
         }
         return "Error, not logged in.";
     }
+
+
+
+
+    // Below are functions to update userdata in the database
+
+    //function to update username in database
     public function alterUsername($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -195,6 +208,9 @@ class DataHandler
         
         
     }
+
+    //function to update users lastname in database
+
     public function alterLastname($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -207,6 +223,8 @@ class DataHandler
         return("successAlter");
         
     }
+
+    //function to update users firstname in database
     public function alterFirstname($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -219,6 +237,8 @@ class DataHandler
         return("successAlter");
         
     }
+
+    //function to update users salutation in database
     public function alterSalutation($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -231,6 +251,8 @@ class DataHandler
         return("successAlter");
         
     }
+
+    //function to update users birth-date in database
     public function alterBirthDate($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -243,6 +265,9 @@ class DataHandler
         return("successAlter");
         
     }
+
+
+    //function to update users password in database
     public function alterPassword($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
@@ -256,6 +281,9 @@ class DataHandler
         
         
     }
+
+
+    //function to update users email in database
     public function alterEmail($param){
         $username=$_SESSION["username"];
         $sql = "UPDATE persons 
