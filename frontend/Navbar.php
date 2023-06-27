@@ -34,8 +34,8 @@
     </nav>
 
 
-    <script>// ---------Responsive-navbar-active-animation-----------
-// ---------Responsive-navbar-active-animation-----------
+    <script>
+//Responsive-navbar-animation
 function test(){
 	var tabsNewAnim = $('#navbarSupportedContent');
 	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
@@ -78,7 +78,7 @@ $(".navbar-toggler").click(function(){
 
 
 
-// --------------add active class-on another-page move----------
+//add active class-on another-page move
 jQuery(document).ready(function($){
 	// Get current path and find target link
 	var path = window.location.pathname.split("/").pop();
