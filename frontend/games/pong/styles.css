@@ -1,0 +1,174 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+/*.grid{
+    margin:auto;
+    left: 25%;
+    top: 25%;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+}*/
+
+.field{
+    width: 33%;
+    height: 33%;
+    position: relative;
+}
+
+:root{
+    --hue: 200;
+    --saturation: 50%;
+    --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+    --background-color: hsl(var(--hue), var(--saturation), 20%);
+}
+
+body{
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.board{
+    /*CSS Variable to change it from scrips.js*/
+    --position: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    /*To position the top of the board in the middle of the screen
+    transform: to fix the offset by half of the height*/
+    top: calc(var(--position) * 1vh);
+    transform: translateY(-50%);
+    /*sets the board into proposition to the screen, to make the game fair*/
+    width: 1vh;
+    height: 10vh;
+    
+}
+
+/*left/right vw sets the position 1% of the screen away from the side*/
+.board.left{
+    left: 1vw;
+}
+
+.board.right{
+    right: 1vw;
+}
+
+.ball{
+    /*CSS Variable to change it from scrips.js*/
+    --x: 50;
+    --y: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    /*To position the top of the board in the middle of the screen
+    transform: to fix the offset by half of the height*/
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /*sets the board into proposition to the screen, to make the game fair*/
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: var(--foreground-color);
+}
+
+/*select every direct child*/
+.score > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .5;
+}
+.score > :first-child{
+    text-align: center;
+}
+
+.username{
+    color: var(--foreground-color);
+    justify-content: top;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .5;
+}
+
+/*.container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+  }*/
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .centerBTN{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .RetryButton{
+    color: var(--background-color);
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    border: none;
+    background-color: var(--foreground-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-auto-rows: 1fr;
+    height: 100%;
+  }
+  
+  
+  
+  .field {
+    position: relative;
+  }
+  
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .GameField{
+    height: 90vh;
+    width: 60vh;
+  }
+  
