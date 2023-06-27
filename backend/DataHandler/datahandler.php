@@ -15,6 +15,9 @@ class DataHandler
         self::$dbaccess = new DBaccess();
         self::$db = self::$dbaccess->connect();
     }
+
+
+    //function to query a score by playerId
     public function queryScoresPerPlayer($param)
     {
         $sql = "SELECT * FROM scores WHERE P_ID=$param;";
@@ -27,6 +30,8 @@ class DataHandler
         }
         return $data;
     }
+
+    //function to query score by gameID
     public function queryScoresPerGame($param)
     {
         $sql = "SELECT * FROM scores WHERE P_ID=$param;";
@@ -39,6 +44,8 @@ class DataHandler
         }
         return $data;
     }
+
+    //function to submit scores in database
     public function submitScore($param){
         $playerID = $param["playerID"];
         $gameID = $param["gameID"];
@@ -50,6 +57,8 @@ class DataHandler
         $stmt->execute();
     }
 
+
+    //function to insert new User in database
     public function submitPlayer($param){
         
         $salutation = $param[0];
@@ -71,6 +80,9 @@ class DataHandler
         }
         return "Oompa Loompa";
     }
+
+
+    //function to search user in database
     public function searchPlayer($param){
         $username = $param;
         $data = [];
