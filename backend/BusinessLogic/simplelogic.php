@@ -14,6 +14,7 @@ class SimpleLogic
         // hier werden die verschiedenen Funktionen aufgerufen,
         
         switch ($method) {
+            
             case "queryScoresPerPlayer":
                 $res = $this->dh->queryScoresPerPlayer($param); //param = player id
                 break;
@@ -29,6 +30,42 @@ class SimpleLogic
             case "searchPlayer":
                 $res = $this->dh->searchPlayer($param); //param = username
                 break;
+            case "loginUser":
+                $res = $this->dh->loginUser($param); //param = username, pw
+                break;
+            case "getLeaders":
+                $res = $this->dh->getLeaders();
+                break;
+            case "setLeader":
+                $res = $this->dh->setLeader($param);
+                break;
+            case "Logout":
+                $res = $this->dh->Logout();
+                break;
+            case "alterUsername":
+                $res = $this->dh->alterUsername($param);
+                break;
+            case "alterFirstname":
+                $res = $this->dh->alterFirstname($param);
+                break;
+            case "alterLastname":
+                $res = $this->dh->alterLastname($param);
+                break;    
+            case "alterPassword":
+                $res = $this->dh->alterPassword($param);
+                break;
+            case "alterEmail":
+                $res = $this->dh->alterEmail($param);
+                break; 
+            case "alterSalutation":
+                $res = $this->dh->alterSalutation($param);
+                break;    
+            case "alterBirthDate":
+                $res = $this->dh->alterBirthDate($param);
+                break;    
+                
+                
+                     
         }
         return $res;
     }
