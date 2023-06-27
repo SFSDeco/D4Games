@@ -9,11 +9,11 @@ Getting started as a user, please refer to the user manual in the info folder.
 For Deployment, please view the Deployment Manual in the info folder.
 
 # Developers:
-David Ung
-Michael Reichenberger
-Max Trostmann
-Max Scheuchel
-Tobias Schmidt
+David Ung  
+Michael Reichenberger  
+Max Trostmann  
+Max Scheuchel  
+Tobias Schmidt  
 
 # Mentor:
 Martin Docsek
