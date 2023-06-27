@@ -12,10 +12,12 @@ export default class Piece{
         this.pawnMoves = pawnMoves;
     }
 
+    //generates Pawn Moves (independent from sight)
     genPawnMoves(ind){
         let moves = [];
         if(this.color === "white"){
             if(!this.moved){
+                //moving index by 8 is equivalent to 1 rank
                 moves.push(ind-16);
                 moves.push(ind-8);
             }
@@ -45,6 +47,7 @@ export default class Piece{
             case("R"): sight = this.rookSight(position, board); break;
             case("N"): sight = this.nightSight(position, board); break;
             case("B"): sight = this.shopSight(position, board); break;
+            //Queen sees Bishop + Rook
             case("Q"): sight = this.rookSight(position, board); this.shopSight(position, board); break;
             case("K"): sight = this.kingSight(position, board); break;
         }
@@ -304,6 +307,7 @@ export default class Piece{
         return legal;
     }
 
+//OLD ALGORITHM FOR LEGAL MOVES -> kept for reference purposes
     /*legalMove(position, destination, board, pieceIndex, destinIndex){
         switch(this.type){
             case("p"):
@@ -682,7 +686,7 @@ export default class Piece{
         return false;
     }*/
 }
-
+//modulo function with proper functionality, % in JS is faulty
 function mod(n, m) {
     return ((n % m) + m) % m;
 }
