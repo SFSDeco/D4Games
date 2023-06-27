@@ -11,7 +11,7 @@ class SimpleLogic
 
     function handleRequest($method, $param)
     {
-        // hier werden die verschiedenen Funktionen aufgerufen,
+        // This is where the various functions are called
         
         switch ($method) {
             
